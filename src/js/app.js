@@ -33,20 +33,26 @@ function render(variables = {}) {
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
-          <h1>${variables.name == null ? "John" : variables.name} ${
-    variables.lastname == null ? "Smith" : variables.lastname
+          <h1>${variables.name ? variables.name : "John"} ${
+    variables.lastname ? variables.lastname : "Smith"
   }</h1>
-          <h2>${
-            variables.role == null ? "Software Knight" : variables.role
-          }</h2>
-          <h3>${variables.city == null ? "King’s Landing" : variables.city}, ${
-    variables.country == null ? "Westeros" : variables.country
+          <h2>${variables.role ? variables.role : "Software Knight"}</h2>
+          <h3>${variables.city ? variables.city : "King’s Landing"}, ${
+    variables.country ? variables.country : "Westeros"
   }</h3>
           <ul class="${variables.socialMediaPosition}">
-            <li><a href="https://twitter.com/4geeksacademy"><i class="bi bi-twitter"></i></a></li>
-            <li><a href="https://github.com/4geeksacademy"><i class="bi bi-github"></i></a></li>
-            <li><a href="https://linkedin.com/4geeksacademy"><i class="bi bi-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/4geeksacademy"><i class="bi bi-instagram"></i></a></li>
+            <li><a href="https://twitter.com/${
+              variables.twitter ? variables.twitter : "4geeksacademy"
+            }"><i class="bi bi-twitter"></i></a></li>
+            <li><a href="https://github.com/${
+              variables.github ? variables.github : "4geeksacademy"
+            }"><i class="bi bi-github"></i></a></li>
+            <li><a href="https://linkedin.com/${
+              variables.linkedin ? variables.linkedin : "4geeksacademy"
+            }"><i class="bi bi-linkedin"></i></a></li>
+            <li><a href="https://instagram.com/${
+              variables.instagram ? variables.instagram : "4geeksacademy"
+            }"><i class="bi bi-instagram"></i></a></li>
           </ul>
         </div>
     `;
