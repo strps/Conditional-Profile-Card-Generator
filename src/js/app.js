@@ -41,18 +41,26 @@ function render(variables = {}) {
     variables.country ? variables.country : "Westeros"
   }</h3>
           <ul class="${variables.socialMediaPosition}">
-            <li><a href="https://twitter.com/${
-              variables.twitter ? variables.twitter : "4geeksacademy"
-            }"><i class="bi bi-twitter"></i></a></li>
-            <li><a href="https://github.com/${
-              variables.github ? variables.github : "4geeksacademy"
-            }"><i class="bi bi-github"></i></a></li>
-            <li><a href="https://linkedin.com/${
-              variables.linkedin ? variables.linkedin : "4geeksacademy"
-            }"><i class="bi bi-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/${
-              variables.instagram ? variables.instagram : "4geeksacademy"
-            }"><i class="bi bi-instagram"></i></a></li>
+            <li class=${
+              variables.twitter ? "" : "hidden"
+            }><a href="https://twitter.com/${
+    variables.twitter ? variables.twitter : "4geeksacademy"
+  }"><i class="bi bi-twitter"></i></a></li>
+            <li class=${
+              variables.github ? "" : "hidden"
+            }><a href="https://github.com/${
+    variables.github ? variables.github : "4geeksacademy"
+  }"><i class="bi bi-github"></i></a></li>
+            <li class=${
+              variables.linkedin ? "" : "hidden"
+            }><a href="https://linkedin.com/${
+    variables.linkedin ? variables.linkedin : "4geeksacademy"
+  }"><i class="bi bi-linkedin"></i></a></li>
+            <li class=${
+              variables.instagram ? "" : "hidden"
+            }><a href="https://instagram.com/${
+    variables.instagram ? variables.instagram : "4geeksacademy"
+  }"><i class="bi bi-instagram"></i></a></li>
           </ul>
         </div>
     `;
@@ -70,12 +78,12 @@ window.onload = function() {
     // this is the url of the image that will used as background for the profile cover
     background: "https://images.unsplash.com/photo-1511974035430-5de47d3b95da",
     // this is the url for the profile avatar
-    avatarURL: "https://randomuser.me/api/portraits/men/40.jpg",
+    avatarURL: "https://randomuser.me/api/portraits/men/39.jpg",
     // social media bar position (left or right)
     socialMediaPosition: "position-left",
     // social media usernames
     twitter: null,
-    github: "alesanchezr",
+    github: "JohnSmith",
     linkedin: null,
     instagram: null,
     name: null,
